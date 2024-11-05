@@ -7,12 +7,15 @@ import time
 import zipfile
 import glob
 
+# Preparing values
+json_data = st.secrets["json_data"]
+json_object = json.loads(json_data, strict=False)
+service_account = st.secrets["service_account"]
+json_object = json.dumps(json_object)# Authorising the app
+credentials = ee.ServiceAccountCredentials(service_account, key_data=json_object)
 
-service_account = 'streamlit-gee@ee-sthiyaku.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, ".ee-sthiyaku-84fbe8a3a489.json")
-ee.Initialize(credentials, project='ee-sthiyaku')
 # Initialize Google Earth Engine
-# ee.Initialize()
+ee.Initialize(credentials, project='ee-sthiyaku')
 
 # Set up the Streamlit app layout and title
 st.title("Upload GeoJSON or Shapefile to GEE")
