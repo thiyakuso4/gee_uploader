@@ -48,15 +48,12 @@ def get_vector(uploaded_file, out_dir=None):
             extract_dir = os.path.join(out_dir, out_name + "_" + geemap.random_string(3))
             zip_ref.extractall(extract_dir)
             files = glob.glob(extract_dir + "/*.shp")
-            st.write(files[0])
-            st.write(os.path.exists(files[0]))
             if files:
                 vector = geemap.shp_to_ee(files[0])
             else:
                 files = glob.glob(extract_dir + "/*.geojson")
                 if files:
                     vector = geemap.geojson_to_ee(files[0])  
-        st.write(vector)    
     else:
         out_name = uploaded_file.name.replace(".geojson", "").replace(".json", "")
         vector = geemap.geojson_to_ee(out_file)
@@ -84,11 +81,8 @@ if uploaded_file:
     st.write("Processing the uploaded file...")
     try:
         fc, layer_name = get_vector(uploaded_file)
-        st.write(fc)
-        st.write(layer_name)
-        import_asset_to_gee(fc, layer_name)
-        
-        st.write("File uploaded successfully.")
+        import_asset_to_gee(fc, layer_name)        
+        st.write(f"File {layer_name} uploaded successfully.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
 else:
