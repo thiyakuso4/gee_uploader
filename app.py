@@ -81,7 +81,8 @@ if uploaded_file:
     st.write("Processing the uploaded file...")
     try:
         fc, layer_name = get_vector(uploaded_file)
-        st.write("Test")
+        st.write(fc)
+        st.write(layer_name)
         import_asset_to_gee(fc, layer_name)
         
         st.write("File uploaded successfully.")
