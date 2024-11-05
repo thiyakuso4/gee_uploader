@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file", t
 # Define helper functions
 def get_vector(uploaded_file, out_dir=None):
     if out_dir is None:
-        out_dir = os.path.join(os.path.expanduser("~"), "Downloads")
+        out_dir = "./"
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
 
