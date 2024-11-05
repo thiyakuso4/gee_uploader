@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ee-sthiyaku",
+  "private_key_id": "ddf4c09eedaebb40ecb74d1eb207f4c24fbdc5a4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmyttsr+sf/GkN\n01m4sPh1Jsgc+vlwNSVjgQ8j2AGT+w9FbhvYbhgB7RffD8JSQ3qlb48kZZjSAndd\nmxS7l7DARjzw6p2tQyjgmDqCEGMs5r58rPqokIESjmSZNXvUWnpe4/ZRl0LYsBUX\nBf/mODoZByOtC/UNcPZOGOxCMv1qhZrCDTvQIaJNq/zMIW5+HgQGsSe3qsZsjvvq\nsI16HTz+2ZfEJJidp9iL3BsokuByFEciDLFVyVYg3dTBGqTsTa+00E/XAmzPC2wc\nW93w8nkhkgDQQBpDdrEWAn3afNgjuZjBURYCF6CwypbT3c1jAiWaDiRgt7zribST\nWKwhUkzVAgMBAAECggEAGpm3rPnRceR7jKzsXjw7I9Pvjk+ogHC5ackndPv6JHOh\n19zbrATC52u8puKIhz4jzUaheZiKatPh3ZfiEpj6o2+QQIvqYbuYRVmB20RpzLtw\nHcoon8GMFD2JZbXV7eQQKBoLKrAJBS3v7yAR09Gb0moFEpAZoO8nGQV4iIZBTD+I\noSeiAdKst/sqZlaEqlUO1ers3EkJuiPUTe+4rpY1X+qhLIfPOEpUSOeV/T7UKpfR\nBkrFOVDbB70uD+80IP4puU4Roa8gvB/EpKQDRDhXDbpslxy2DNseefH8pexFbXBh\n6FjMwa61X2ayxUcVOt+8KcCmFvWbP+gO3ot6CaG3gQKBgQDVVeCkOnt4VaOGc4yW\nfhW/7AVY6lA53Gvw6YKcbI7cL8alG9VETupteCdL+gw2JaD5hvD7jiCNIbV/M7rv\nhxnXBNmc0edDACBERMzZMDQjlB5fW/4DJKrNAuPnLB4cO4rRtol3S05P+d/qFYe7\nPE1/yJIFdGAwlY7IXJOS8hLorQKBgQDIJh41+BgK8d0ZudhFzjhwgqyGB05zAzcq\nT/Kz3LIKcZvitWn71jJh4utoGF1JXqxuFLI02Nn1XQJgAgbx1sslaYbwjV25jRG8\n2ND0rgpgxMT9BSBcDdGW8eVPQxGMWUux9dhxryhe93pxqsthKpnTuweJ0eWmpzc0\njR+cJUKxyQKBgACGKnwczKraAwHUjNbdzm3fRZAXW0UZHobD/BcoSR2PXHyRWe/G\nBdto/Se5oIgNhZy3USY9DiVqnMiINwBZo52cnHA/L8NBX9LrHFm4PZiMx5pSXohh\nca35QNgTiqtlFg031pSdcb7OjVdE4EV8e3BB7OHojEfyRhyF5bLpt1QtAoGAOjr0\n0SjT/eMuO3zZUj3UJ8+s1/WqOkX2N8Y4y2FrHyS8gLHdGtrPn7EAYjGselsj+Ybl\n7gAlMYCU30/Xq2adhc3052mJmiFTxsihyn4UIOE+mopyRrXyg2LvHydZJKcaIbVv\n+mtGaJLBue5B64wUYwhoAg3iLaE6q3xfdPNWOxkCgYAC3MNMcS+TxcrL66lwDtf7\nTkTdptS8IeDUpW1YT/7svpA86+LxGAIfAKZPSPn6tbmqvOEH9Scl+acbLZu7qzDg\nWD0vCG4hNdqhjuvbtyWsrnqi5iBYNFUSXxvAHbAWU+eKM4cttapmEvYvQi1czAIY\n8JFKtaanC6GmFxwwsBsDNQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "streamlit-geeuploader@ee-sthiyaku.iam.gserviceaccount.com",
+  "client_id": "113237710766561002862",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/streamlit-geeuploader%40ee-sthiyaku.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
