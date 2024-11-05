@@ -41,7 +41,7 @@ def get_vector(uploaded_file, out_dir=None):
     out_file = os.path.join(out_dir, uploaded_file.name)
     with open(out_file, "wb") as fp:
         fp.write(content)
-    st.write(content)
+    
     if uploaded_file.name.endswith(".zip"):
         out_name = uploaded_file.name[:-4]
         with zipfile.ZipFile(out_file, "r") as zip_ref:
@@ -54,6 +54,7 @@ def get_vector(uploaded_file, out_dir=None):
                 files = glob.glob(extract_dir + "/*.geojson")
                 if files:
                     vector = geemap.geojson_to_ee(files[0])  
+        st.write(vector)
     else:
         out_name = uploaded_file.name.replace(".geojson", "").replace(".json", "")
         vector = geemap.geojson_to_ee(out_file)
