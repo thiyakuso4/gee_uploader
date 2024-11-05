@@ -81,7 +81,9 @@ if uploaded_file:
     st.write("Processing the uploaded file...")
     try:
         fc, layer_name = get_vector(uploaded_file)
+        st.write("Test")
         import_asset_to_gee(fc, layer_name)
+        
         st.write("File uploaded successfully.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
