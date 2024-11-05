@@ -8,8 +8,8 @@ import zipfile
 import glob
 
 
-service_account = 'streamlit-geeuploader@ee-sthiyaku.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, "ee-sthiyaku-ddf4c09eedae.json")
+service_account = 'streamlit-uploader@ee-sthiyaku.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, ".ee-sthiyaku-60ff8f3de03c.json")
 ee.Initialize(credentials, project='ee-sthiyaku')
 # Initialize Google Earth Engine
 # ee.Initialize()
