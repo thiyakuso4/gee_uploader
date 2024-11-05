@@ -4,7 +4,6 @@ import geemap
 import streamlit as st
 import json
 import time
-from streamlit_folium import st_folium
 import zipfile
 import glob
 
