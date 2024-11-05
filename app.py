@@ -32,7 +32,6 @@ def get_vector(uploaded_file, out_dir=None):
         out_dir = "./"
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
-    st.write(os.path.exists(out_dir))
     vector = None
     out_name = None
 
