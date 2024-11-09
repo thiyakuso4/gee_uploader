@@ -61,7 +61,7 @@ def get_vector(uploaded_file, out_dir=None):
 
     return vector, out_name
 
-def import_asset_to_gee(ee_object, asset_name, asset_path="projects/ee-landflux/assets"):
+def import_asset_to_gee(ee_object, asset_name, asset_path="projects/ee-landflux/assets/ecoexplorer"):
     asset_id = f"{asset_path}/{asset_name}"
     exportTask = ee.batch.Export.table.toAsset(
         collection=ee_object,
