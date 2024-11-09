@@ -15,7 +15,7 @@ json_object = json.dumps(json_object)# Authorising the app
 credentials = ee.ServiceAccountCredentials(service_account, key_data=json_object)
 
 # Initialize Google Earth Engine
-ee.Initialize(credentials, project='ee-sthiyaku')
+ee.Initialize(credentials, project='ee-landflux')
 
 # Set the title that appears on the browser tab
 st.set_page_config(page_title="Shapefile/GeoJSON uploader")
