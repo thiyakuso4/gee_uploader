@@ -31,8 +31,7 @@ st.title("Upload GeoJSON or Shapefile to GEE")
 
 # Instructions for the app
 st.write("This app allows you to upload a shapefile or GeoJSON file to Google Earth Engine.")
-# Set the maximum upload size to 10 MB
-st.set_option('server.maxUploadSize', 10)
+
 # Upload widget for file input
 uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file or .kml file", type=["zip", "geojson", "kml"])
 
