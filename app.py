@@ -56,9 +56,9 @@ def get_vector(uploaded_file, out_dir=None):
                 if files:
                     vector = geemap.geojson_to_ee(files[0])
     elif uploaded_file.name.endswith(".kml"):
-            st.write(f'Here we go {uploaded_file.name}')
+            st.write(f'Here we go {uploaded_file}')
             out_name = uploaded_file.name.replace('.kml', "")
-            vector = geemap.kml_to_ee(out_file)
+            vector = geemap.kml_to_ee(uploaded_file)
     else:
         out_name = uploaded_file.name.replace(".geojson", "").replace(".json", "")
         vector = geemap.geojson_to_ee(out_file)
