@@ -7,6 +7,9 @@ import time
 import zipfile
 import glob
 import fiona
+from shapely.ops import transform
+import geopandas as gpd
+
 
 # To support read and write KML
 fiona.drvsupport.supported_drivers["KML"] = "rw"
@@ -31,6 +34,14 @@ st.write("This app allows you to upload a shapefile or GeoJSON file to Google Ea
 
 # Upload widget for file input
 uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file or .kml file", type=["zip", "geojson", "kml"])
+
+
+# Function to drop Z values from a geometry
+def drop_z(geometry):
+    if geometry.has_z:
+        return transform(lambda x, y, z=None: (x, y), geometry)
+    return geometry
+
 
 # Define helper functions
 def get_vector(uploaded_file, out_dir=None):
@@ -60,6 +71,10 @@ def get_vector(uploaded_file, out_dir=None):
                 if files:
                     vector = geemap.geojson_to_ee(files[0])
     elif uploaded_file.name.endswith(".kml"):
+            gdf = gpd.read_file(out_file)
+            # Drop Z values from all geometries
+            gdf['geometry'] = gdf['geometry'].apply(drop_z)
+            gdf.to_file(out_file)
             st.write(f'Here we go {out_file}')
             out_name = uploaded_file.name.replace('.kml', "")
             vector = geemap.kml_to_ee(out_file)
