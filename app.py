@@ -26,7 +26,7 @@ st.title("Upload GeoJSON or Shapefile to GEE")
 st.write("This app allows you to upload a shapefile or GeoJSON file to Google Earth Engine.")
 
 # Upload widget for file input
-uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file", type=["zip", "geojson"])
+uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file or .kml file", type=["zip", "geojson", "kml"])
 
 # Define helper functions
 def get_vector(uploaded_file, out_dir=None):
@@ -54,7 +54,10 @@ def get_vector(uploaded_file, out_dir=None):
             else:
                 files = glob.glob(extract_dir + "/*.geojson")
                 if files:
-                    vector = geemap.geojson_to_ee(files[0])  
+                    vector = geemap.geojson_to_ee(files[0])
+    elif uploaded_file.name.endswith(".kml"):
+            out_name = uploaded_file.name.replace('.kml')
+            vector = geemap.kml_to_ee(out_file)
     else:
         out_name = uploaded_file.name.replace(".geojson", "").replace(".json", "")
         vector = geemap.geojson_to_ee(out_file)
