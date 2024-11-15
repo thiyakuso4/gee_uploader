@@ -75,7 +75,6 @@ def get_vector(uploaded_file, out_dir=None):
             # Drop Z values from all geometries
             gdf['geometry'] = gdf['geometry'].apply(drop_z)
             gdf.to_file(out_file)
-            st.write(f'Here we go {out_file}')
             out_name = uploaded_file.name.replace('.kml', "")
             vector = geemap.kml_to_ee(out_file)
     else:
