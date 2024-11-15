@@ -6,6 +6,10 @@ import json
 import time
 import zipfile
 import glob
+import fiona
+
+# To support read and write KML
+fiona.drvsupport.supported_drivers["KML"] = "rw"
 
 # Preparing values
 json_data = st.secrets["json_data"]
