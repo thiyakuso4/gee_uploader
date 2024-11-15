@@ -4,3 +4,4 @@ earthengine-api
 setuptools
 geopandas
 pycrs
+fiona
