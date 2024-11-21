@@ -22,7 +22,7 @@ json_object = json.dumps(json_object)# Authorising the app
 credentials = ee.ServiceAccountCredentials(service_account, key_data=json_object)
 
 # Initialize Google Earth Engine
-ee.Initialize(credentials, project='ee-landflux')
+ee.Initialize(credentials, project='careful-ensign-420823')
 
 # Set the title that appears on the browser tab
 st.set_page_config(page_title="Shapefile/GeoJSON uploader")
@@ -83,7 +83,7 @@ def get_vector(uploaded_file, out_dir=None):
 
     return vector, out_name
 
-def import_asset_to_gee(ee_object, asset_name, asset_path="projects/ee-landflux/assets/ecoexplorer"):
+def import_asset_to_gee(ee_object, asset_name, asset_path="projects/careful-ensign-420823/assets/ecoexplorer"):
     asset_id = f"{asset_path}/{asset_name}"
     exportTask = ee.batch.Export.table.toAsset(
         collection=ee_object,
