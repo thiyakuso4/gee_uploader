@@ -30,7 +30,7 @@ st.set_page_config(page_title="KML/Shapefile/GeoJSON uploader")
 st.title("Upload GeoJSON or Shapefile to GEE")
 
 # Instructions for the app
-st.write("This app allows you to upload a shapefile or GeoJSON file to Google Earth Engine.")
+st.write("This app allows you to upload a kml, shapefile or geojson file to Google Earth Engine.")
 
 # Upload widget for file input
 uploaded_file = st.file_uploader("Upload a .zip (shapefile) or .geojson file or .kml file", type=["zip", "geojson", "kml"])
@@ -105,8 +105,8 @@ if uploaded_file:
     try:
         fc, layer_name = get_vector(uploaded_file)
         import_asset_to_gee(fc, layer_name)        
-        st.write(f"File {layer_name} uploaded successfully.")
+        st.write(f"File {layer_name} uploaded successfully. Return to Ecoexplorer and refresh the browser window.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
 else:
-    st.info("Please upload a file to display it on the map.")
+    st.info("Please upload a kml, shapefile (.zip) or geojson file.")
