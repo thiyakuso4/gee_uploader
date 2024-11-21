@@ -105,7 +105,7 @@ if uploaded_file:
     try:
         fc, layer_name = get_vector(uploaded_file)
         import_asset_to_gee(fc, layer_name)        
-        st.write(f"File {layer_name} uploaded successfully. Return to Ecoexplorer and refresh the browser window.")
+        st.write(f"File {layer_name} uploaded successfully. Please return to Ecoexplorer and refresh the browser window.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
 else:
