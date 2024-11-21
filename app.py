@@ -25,7 +25,7 @@ credentials = ee.ServiceAccountCredentials(service_account, key_data=json_object
 ee.Initialize(credentials, project='careful-ensign-420823')
 
 # Set the title that appears on the browser tab
-st.set_page_config(page_title="Shapefile/GeoJSON uploader")
+st.set_page_config(page_title="KML/Shapefile/GeoJSON uploader")
 # Set up the Streamlit app layout and title
 st.title("Upload GeoJSON or Shapefile to GEE")
 
