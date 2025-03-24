@@ -1,7 +1,7 @@
-streamlit<1.24
+streamlit
 geemap
 earthengine-api
 setuptools
 geopandas
-pycrs
+pycrs @ git+https://github.com/karimbahgat/PyCRS.git
 fiona
