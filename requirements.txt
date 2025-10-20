@@ -1,6 +1,6 @@
 streamlit
-geemap==0.33.1
-earthengine-api
+geemap==0.36.5
+earthengine-api==1.5.12
 setuptools
 geopandas
 pycrs @ git+https://github.com/karimbahgat/PyCRS.git
