@@ -1,5 +1,5 @@
 streamlit
-geemap @ git+https://github.com/gee-community/geemap.git
+geemap @ git+https://github.com/gee-community/geemap
 earthengine-api
 setuptools
 geopandas
