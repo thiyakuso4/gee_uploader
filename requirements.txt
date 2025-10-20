@@ -1,4 +1,6 @@
 streamlit
+nodejs
+npm
 geemap @ git+https://github.com/gee-community/geemap
 earthengine-api
 setuptools
