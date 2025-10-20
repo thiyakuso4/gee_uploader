@@ -1,7 +1,5 @@
 streamlit
-nodejs
-npm
-geemap @ git+https://github.com/gee-community/geemap
+geemap==0.33.1
 earthengine-api
 setuptools
 geopandas
